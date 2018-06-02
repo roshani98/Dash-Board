@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<style>
+input[type=submit] {
+    width: 25%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position:relative;
+	margin-top:680px;
+	margin-bottom:10px;
+	margin-left:250px;
+}
+
+.header{
+    color: #eee;
+    background-color: #212121;
+    font-size: 25px;
+    padding: .5em 0;
+    border-top: 4px solid #8BC34A;
+}
+h1{
+    text-align:center;
+    font-weight: 400;
+    font-family: varela round,sans-serif;
+    font-size: 36px;
+}
+h2{
+    font-weight: 400;
+    font-family: varela round,sans-serif;
+}
+h4{
+    font-weight: 400;
+    font-family: varela round,sans-serif;
+}
+html {
+    background-color:#EFEBE9;
+}
+input[type=text] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: 400;
+    font-family: varela round,sans-serif;
+    font-size:15px;
+}
+
+#block1 {
+    margin: 10px 20px;
+    padding: 20px;
+    width:50%;
+    float: left;
+}
+
+#block2 {
+    margin: 10px 20px;
+    padding: 20px;
+    width: 100%;
+    margin-left:50%;
+}
+
+#block3 {
+    margin: 10px 20px;
+    padding: 20px;
+    width: 50%;
+    float: left;
+}
+
+#block4 {
+    margin: 20px 20px;
+    padding: 20px;
+    width: 100%;
+    float:left;
+}
+
+footer{
+	background:#A1887F;
+	color:#fff;
+	margin-top:50px;
+	padding:5px;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+<h1>DASHBOARD</h1>
+</div>
+
+<form action = "display.jsp">
+<div id="block1">
+<h2>Project Details</h2>
+<label for="appname" id="label"> APPLICATION NAME </label><br>
+<input type="text" id="appname" name="appname" placeholder="Enter the Application name" required><br><br>
+
+
+<label for="hostname">HOST ADDRESS</label><br>
+<input type="text" id="hostAddr" name="hostAddr" placeholder="Enter the host address" required><br><br>
+
+<label for="hostname">PORT NUMBER</label><br>
+<input type="text" id="portNo" name="portNo" placeholder="Enter the port number" required>
+</div>
+
+<div id="block2">
+<h2> Project Description </h2>
+<input type="checkbox" name="names" value="CPU Monitoring">CPU Monitoring <br><br>
+<input type="checkbox" name="names" value="Disk Monitoring">Disk Monitoring <br><br>
+<input type="checkbox" name="names" value="GC">GC<br><br>
+<input type="checkbox" name="names" value="Stack Trace">Stack Trace
+</div>
+
+<div id="block3">
+<h2> Select Queue Names </h2>
+<h4>Press Ctrl to select multiple queuenames</h4>
+<select name="select2" size="10" multiple="multiple">
+<option value="ABInterfaceRequestQ"> "JNDI NAME: ABInterfaceRequestQ queuename : ABInterfaceRequestQ"</option>
+<option value="ABInterfaceResponseQ"> "JNDI NAME: ABInterfaceResponseQ queuename : ABInterfaceResponseQ"</option>
+<option value="ABPoolingRequestQ"> "JNDI NAME: ABPoolingRequestQ queuename : ABPoolingRequestQ"</option>
+.
+.
+.
+<option value="JPTimeOutQ"> "JNDI NAME: JPTimeOutQ queuename : JPTimeOutQ"</option>
+<option value="ArchivalQ"> "JNDI NAME: ArchivalQ queuename : ArchivalQ"</option>
+<option value="ArchivalTXNQ"> "JNDI NAME: ArchivalTXNQ queuename : ArchivalTXNQ"</option>
+<option value="MyUtilityQ"> "JNDI NAME: MyUtilityQ queuename : MyUtilityQ"</option>
+</select>
+</div>
+
+<div id="block4">
+<h2>Select Data Source Name</h2>
+<input type="checkbox" value="data">OLM Data Source
+</div>
+
+<div id="block5">
+<input type="submit" value="Submit">
+</div>
+
+</form>
+
+ <footer>
+  <div class="centered clearfix">
+    <div class="footer-logo">
+      <div class="social" style="float:right">
+        <a href="https://www.facebook.com/" class="facebook">
+          <svg style="height:25px" viewBox="0 0 33 33"><g><path d="M 17.996,32L 12,32 L 12,16 l-4,0 l0-5.514 l 4-0.002l-0.006-3.248C 11.993,2.737, 13.213,0, 18.512,0l 4.412,0 l0,5.515 l-2.757,0 c-2.063,0-2.163,0.77-2.163,2.209l-0.008,2.76l 4.959,0 l-0.585,5.514L 18,16L 17.996,32z"></path></g></svg>
+        </a>
+        <a href="https://twitter.com/" class="twitter">
+          <svg style="height:25px; margin-left:10px; margin-right:10px;" viewBox="0 0 33 33"><g><path d="M 32,6.076c-1.177,0.522-2.443,0.875-3.771,1.034c 1.355-0.813, 2.396-2.099, 2.887-3.632 c-1.269,0.752-2.674,1.299-4.169,1.593c-1.198-1.276-2.904-2.073-4.792-2.073c-3.626,0-6.565,2.939-6.565,6.565 c0,0.515, 0.058,1.016, 0.17,1.496c-5.456-0.274-10.294-2.888-13.532-6.86c-0.565,0.97-0.889,2.097-0.889,3.301 c0,2.278, 1.159,4.287, 2.921,5.465c-1.076-0.034-2.088-0.329-2.974-0.821c-0.001,0.027-0.001,0.055-0.001,0.083 c0,3.181, 2.263,5.834, 5.266,6.438c-0.551,0.15-1.131,0.23-1.73,0.23c-0.423,0-0.834-0.041-1.235-0.118 c 0.836,2.608, 3.26,4.506, 6.133,4.559c-2.247,1.761-5.078,2.81-8.154,2.81c-0.53,0-1.052-0.031-1.566-0.092 c 2.905,1.863, 6.356,2.95, 10.064,2.95c 12.076,0, 18.679-10.004, 18.679-18.68c0-0.285-0.006-0.568-0.019-0.849 C 30.007,8.548, 31.12,7.392, 32,6.076z"></path></g></svg>
+        </a>
+        <a href="https://www.linkedin.com/" class="linkedin">
+          <svg style="height:25px" viewBox="0 0 512 512"><g><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"></path></g></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-contact">
+       <h3 style="color:#FFFFFF">Contact</a></h3>
+       <a href="mailto:" style="color:#FFFFFF">abc@abc.com</a><br>
+       <a href="tel:" style="color:#FFFFFF">123-456-7890</a><br>
+       <a href="" style="color:#FFFFFF">123 Abc address<br />Fake, PA 11111</a><br><br>
+    </div>
+    </div>
+  <div class="bottom-bar">
+      All Rights Reserved � 2016 | <a href="">Privacy Policy</a> | <a href="">Terms of Service</a>
+  </div>
+</footer>
+
+</body>
+</html>
